@@ -13,4 +13,6 @@ int main(void) {
   printf("average of %g and %g: %g\n", n1, n2, average(n1, n2));
   printf("average of %g and %g: %g\n", n1, n3, average(n1, n3));
   printf("average of %g and %g: %g\n", n2, n3, average(n2, n3));
+
+  return 0;
 }
