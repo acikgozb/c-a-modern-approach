@@ -1,0 +1,39 @@
+#ifndef QUEUE_ADT_H
+#define QUEUE_ADT_H
+
+#include <stdbool.h>
+
+// SOLUTION (1): Declare the incomplete `Queue` type and it's functions.
+typedef struct queue_type *Queue;
+
+// Since the requirements do not specify
+// a certain item type, a `void *` is used.
+typedef void *Item;
+
+// Inserts an item to the end of a Queue.
+Queue enqueue(Queue q, void *item);
+
+// Removes an item from the beginning of a Queue.
+Item dequeue(Queue q);
+
+// Returns the first item in a Queue.
+// This operation does not change the Queue.
+Item peek_first(const Queue q);
+
+// Returns the last item in a Queue.
+// This operation does not change the Queue.
+Item peek_last(const Queue q);
+
+// Returns whether the Queue is empty or not.
+bool is_empty(const Queue q);
+
+// Creates a new queue.
+Queue create(void);
+
+// Destroys a queue.
+// The caller should call `destroy` to free
+// the memory allocated for the queue.
+// Reading the queue after it's destroyed
+// causes undefined behavior.
+void destroy(Queue q);
+#endif
