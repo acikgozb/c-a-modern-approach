@@ -18,7 +18,7 @@ void count_words(char *filename);
 void count_lines(char *filename);
 
 int main(int argc, char **argv) {
-  if (argc == 1) {
+  if (argc != 3) {
     fprintf(stderr, "usage: 04 <a | b | c> <filename>");
     exit(EXIT_FAILURE);
   }
@@ -35,14 +35,14 @@ int main(int argc, char **argv) {
     count_lines(argv[2]);
     break;
   default:
-    fprintf(stderr, "usage: 04 <a | b | c>");
+    fprintf(stderr, "usage: 04 <a | b | c> <filename>");
     exit(EXIT_FAILURE);
   }
 
   return 0;
 }
 
-// NOTE: We need that in C, each character
+// NOTE: We know that in C, each character
 // occupies a single byte.
 // Therefore, in order to determine the number
 // of characters, we can simply check the file's size.
