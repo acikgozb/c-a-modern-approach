@@ -32,16 +32,5 @@ int main(int argc, char **argv) {
            p_year);
   }
 
-  // printf("enter item number: ");
-  // scanf("%d", &number);
-
-  // printf("enter unit price: ");
-  // scanf("%f", &price);
-
-  // printf("enter purchase date (mm/dd/yyyy): ");
-  // scanf("%02d/%02d/%4d", &purchase_month, &purchase_day, &purchase_year);
-
-  // printf("Item\t\tUnit\t\tPurchase\n\t\tPrice\t\tDate\n");
-  // printf("%-8d\t$%8.2f\t%.2d/%.2d/%d\n", number, price, purchase_day,
-  //        purchase_month, purchase_year);
+  fclose(fp);
 }
