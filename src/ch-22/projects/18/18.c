@@ -57,6 +57,7 @@ int main(int argc, char **argv) {
   }
   printf("the median number in %s is %d\n", argv[1], median);
 
+  fclose(src);
   return 0;
 }
 
